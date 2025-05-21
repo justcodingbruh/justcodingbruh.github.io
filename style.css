@@ -1,0 +1,242 @@
+:root {
+    --cor-bg: #fff;
+    --cor-texto: #222;
+    --cor-accent: #6abf69;
+    --cor-accent-light: #daf0d7;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--cor-bg);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    padding-top: 110px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    padding: 0.75rem 2rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 720px;
+    width: 90%;
+    height: 70px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--cor-texto);
+}
+
+.logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cor-accent);
+}
+
+.btn-outline {
+    border: 2px solid var(--cor-accent);
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    color: var(--cor-accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: var(--cor-accent);
+    color: white;
+}
+
+/* HERO */
+.hero-section {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.hero-section h2 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--cor-accent);
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* IMAGEM HOTEL */
+.imagem-hotel {
+    width: 100%;
+    margin: 2rem 0 4rem;
+    text-align: center;
+}
+
+.imagem-hotel img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* SECTIONS */
+.section {
+    margin-top: 5rem;
+}
+
+.section h3 {
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--cor-texto);
+}
+
+.section p {
+    font-weight: 300;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--cor-accent-light);
+    padding: 1.5rem;
+    border-radius: 15px;
+    flex: 1 1 40%;
+    min-width: 260px;
+    box-shadow: 0 6px 12px rgb(106 191 105 / 0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h4 {
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--cor-accent);
+}
+
+.card p {
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--cor-texto);
+}
+
+/* BOTÃO */
+.btn-primary {
+    background-color: var(--cor-accent);
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #4a8a3a;
+}
+
+/* FOOTER */
+footer {
+    background: #f5f5f5;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 6rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 0.5rem;
+        height: auto;
+        padding: 1rem 1.5rem;
+    }
+}
