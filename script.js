@@ -9,3 +9,7 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled');
     }
 });
+
+window.addEventListener('load', () => {
+    document.querySelector('header').classList.add('scrolled');
+});

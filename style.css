@@ -52,7 +52,8 @@ header {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(140, 200, 140, 0.3);
+    background-color: rgba(140, 200, 140, 0.3) !important;
+    /* forçando a cor */
     backdrop-filter: blur(12px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     border-radius: 40px;
@@ -65,8 +66,6 @@ header {
     width: 90%;
     height: 70px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    color: #2f4f4f;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
 }
 
 /*header.scrolled {
