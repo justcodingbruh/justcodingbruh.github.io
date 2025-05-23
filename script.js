@@ -1,4 +1,8 @@
-window.addEventListener("scroll", function () {
-    const header = document.querySelector("header");
-    header.classList.toggle("scrolled", window.scrollY > 10);
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 30) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
 });
