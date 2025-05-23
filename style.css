@@ -114,7 +114,8 @@ header {
     border: 2px solid var(--cor-accent);
     border-radius: 20px;
     padding: 0.4rem 1.1rem;
-    color: var(--cor-accent);
+    color: black;
+    background-color: transparent;
     font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.3s ease;
@@ -124,11 +125,10 @@ header {
 
 .btn-outline:hover,
 .btn-outline:focus {
-    background-color: var(--cor-accent);
-    color: #fff;
+    background-color: var(--cor-accent-light); /* fundo mais claro para contraste */
+    color: black; /* texto continua visível */
+    border-color: var(--cor-accent);
     outline: none;
-    outline: 2px solid #fff;
-    outline-offset: 2px;
 }
 
 .hero-section {
@@ -322,7 +322,6 @@ footer {
     0% {
         transform: translateX(0);
     }
-
     100% {
         transform: translateX(-50%);
     }
