@@ -1,6 +1,5 @@
 :root {
     --cor-bg: #e4f5e4;
-    /* Unifiquei para esse tom bege/dourado fraco */
     --cor-bg-secundario: #f2f9f1;
     --cor-texto: #222;
     --cor-accent: #6abf69;
@@ -14,10 +13,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Lembre-se de importar a fonte Poppins no HTML:
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-*/
 
 body {
     font-family: var(--font-family);
@@ -53,7 +48,6 @@ header {
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(140, 200, 140, 0.3) !important;
-    /* forçando a cor */
     backdrop-filter: blur(12px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     border-radius: 40px;
@@ -67,11 +61,6 @@ header {
     height: 70px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
-/*header.scrolled {
-    background-color: rgba(140, 200, 140, 0.8);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-}*/
 
 .header-content {
     display: flex;
@@ -112,11 +101,11 @@ header {
     text-shadow: inherit;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
+.nav-links a:hover {
     color: var(--cor-accent);
-    outline: none;
-    /* Acessibilidade: adicionar outline para foco */
+}
+
+.nav-links a:focus-visible {
     outline: 2px solid var(--cor-accent);
     outline-offset: 2px;
 }
@@ -138,7 +127,6 @@ header {
     background-color: var(--cor-accent);
     color: #fff;
     outline: none;
-    /* Acessibilidade: adicionar outline para foco */
     outline: 2px solid #fff;
     outline-offset: 2px;
 }
