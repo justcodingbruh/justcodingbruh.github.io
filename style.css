@@ -325,7 +325,8 @@ footer {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 90px;
+        padding-top: 140px;
+        /* Corrigido para evitar sobreposição do header */
     }
 
     header {
